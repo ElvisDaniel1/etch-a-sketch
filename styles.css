@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#container {
+    border: 1px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    height: 700px;
+}
+
+#container div {
+    border: 1px solid red;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
