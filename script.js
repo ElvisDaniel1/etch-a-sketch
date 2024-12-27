@@ -36,21 +36,34 @@ function createContainer() {
 
         container.appendChild(pixel);
         pixel.classList.add("pixels");
-        pixel.addEventListener("mousemove", function(e) {
+        pixel.addEventListener("mouseover", function(e) {
             let target = e.currentTarget;
             target.classList.add("etch");
-            colorMe();
+            colorMe(e);
         });
     }
 }
 
-function colorMe() {
+function colorMe(e) {
+    let hexValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+    let hexColor = "#";
+
+    for(let i = 0; i < 6; i++)
+    {
+        let randNum = Math.floor(Math.random() * 16); 
+        randHex = hexValues[randNum];
+        hexColor = hexColor.concat(randHex);
+    }
+
+    /*
     let targets = document.querySelectorAll(".etch");
     targets.forEach(target => {
-        target.style.backgroundColor = "red";
+        target.style.backgroundColor = hexColor;
     });   
-    console.log(targets);
+    */
+    let pixel = e.currentTarget;
+    pixel.style.backgroundColor = hexColor;
 }
-console.log(size);
+
 //console.log(pxTotalArea);
 //console.log(pxWLen);
