@@ -14,7 +14,7 @@ body {
 }
 
 #container div {
-    border: 1px solid red;
+    border: 1px solid #FF5733;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
